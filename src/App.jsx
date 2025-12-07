@@ -92,7 +92,7 @@ function App() {
           }`
         }
       >
-        Know Us
+        How It Works
       </NavLink>
     </div>
 
