@@ -92,6 +92,12 @@ function AddItem() {
     } finally {
       setIsSubmitting(false);
     }
+setForm({
+     name: "",
+    expiry: "",
+    price: "",
+    amount: "",
+})
   };
 
   return (
@@ -261,5 +267,6 @@ function AddItem() {
     </div>
   );
 }
+
 
 export default AddItem;
