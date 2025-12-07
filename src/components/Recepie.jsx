@@ -46,6 +46,14 @@ localStorage.setItem("customerItems", JSON.stringify(updatedItems));
 
 // update local state 
 setObjects(updatedItems);
+    setForms({
+     name: "",
+    expiry: "",
+    price: "",
+    amount: "",
+    ingredient:[],
+})
+  };
 
   }
 
@@ -416,3 +424,4 @@ const handleDelete = (indexToDelete) => {
 }
 
 export default Recepie;
+
