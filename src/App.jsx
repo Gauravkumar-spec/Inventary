@@ -26,46 +26,79 @@ function App() {
 
   return (
     <>
-    <div className='flex bg-gray-100 sticky top-0 z-50 shadow items-center'>
-      <div className=' pl-8 '><img src="https://img.icons8.com/?size=160&id=124187&format=png" alt=""  className='w-3/4 '/></div>
-      <nav className='flex  flex-wrap gap-1 sm:gap-4 md:gap-6  md:pl-65 w-5/10 xs:pl-20 sm:pl-20 lg:pl-115
-        '>
-          <NavLink
+  <div className="sticky top-0 z-50 bg-white shadow-md">
+  <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+
+    {/* Logo */}
+    <div className="flex items-center">
+      <img
+        src="https://img.icons8.com/?size=160&id=124187&format=png"
+        alt="Logo"
+        className="w-12 h-12 object-contain"
+      />
+    </div>
+
+    {/* Navigation Links */}
+    <nav className="hidden md:flex items-center gap-6">
+      <NavLink
         to="/"
         className={({ isActive }) =>
-          isActive ? 'relative inline-block text-gray-900 font-semibold transition duration-300 ease-in-out border-b-2 border-transparent hover:border-gray-500 ' : 'text-gray-500'
+          `text-sm font-medium transition-all duration-200 ${
+            isActive
+              ? "text-gray-900 border-b-2 border-gray-700 pb-1"
+              : "text-gray-500 hover:text-gray-800"
+          }`
         }
       >
         Home
       </NavLink>
+
       <NavLink
         to="/contact"
         className={({ isActive }) =>
-          isActive ? 'relative inline-block text-gray-900 font-semibold transition duration-300 ease-in-out border-b-2 border-transparent hover:border-gray-500 ' : 'text-gray-500'
+          `text-sm font-medium transition-all duration-200 ${
+            isActive
+              ? "text-gray-900 border-b-2 border-gray-700 pb-1"
+              : "text-gray-500 hover:text-gray-800"
+          }`
         }
       >
         Add Inventory
-      </NavLink>  
+      </NavLink>
+
       <NavLink
         to="/recepie"
         className={({ isActive }) =>
-          isActive ? 'relative inline-block text-gray-900 font-semibold transition duration-300 ease-in-out border-b-2 border-transparent hover:border-gray-500 ' : 'text-gray-500'
+          `text-sm font-medium transition-all duration-200 ${
+            isActive
+              ? "text-gray-900 border-b-2 border-gray-700 pb-1"
+              : "text-gray-500 hover:text-gray-800"
+          }`
         }
       >
-        Recepie
+        Recipe
       </NavLink>
     </nav>
-      <div className='md:ml-30 lg:ml-98'>
+
+    {/* About Link (Right side) */}
+    <div className="hidden md:block">
       <NavLink
         to="/about"
         className={({ isActive }) =>
-          isActive ? ' inline-block text-gray-900 font-semibold transition duration-300 ease-in-out border-b-2 border-transparent hover:font-bold ' : 'text-purple-800 hover:font-semibold'
+          `text-sm font-semibold transition-all duration-200 ${
+            isActive
+              ? "text-gray-900 border-b-2 border-gray-700 pb-1"
+              : "text-purple-700 hover:text-purple-900"
+          }`
         }
       >
-        About
-      </NavLink>  
-      </div>
-     </div>
+        Know Us
+      </NavLink>
+    </div>
+
+  </div>
+</div>
+
 
       {/* relative inline-block text-gray-900 font-semibold transition duration-300 ease-in-out border-b-2 border-transparent hover:border-gray-500 */}
 
